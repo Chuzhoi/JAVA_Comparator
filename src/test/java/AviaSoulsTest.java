@@ -33,7 +33,6 @@ public class AviaSoulsTest {
     }
 
 
-
     @Test
     public void TestForSearchAndSortTickets() {
         AviaSouls manager = new AviaSouls();
@@ -63,38 +62,39 @@ public class AviaSoulsTest {
     }
 
 
-
     @Test
-    public void TestIfTimeFirstTicketOver(){
+    public void TestIfTimeFirstTicketOver() {
         TicketTimeComparator ticketTimeComparator = new TicketTimeComparator();
         AviaSouls manager = new AviaSouls();
         manager.add(ticket4);
         manager.add(ticket5);
         int expected = 1;
-        int actual = ticketTimeComparator.compare(ticket4 , ticket5);
+        int actual = ticketTimeComparator.compare(ticket4, ticket5);
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
-    public void TestIfTimeFirstTicketUnder(){
+    public void TestIfTimeFirstTicketUnder() {
         TicketTimeComparator ticketTimeComparator = new TicketTimeComparator();
         AviaSouls manager = new AviaSouls();
         manager.add(ticket1);
         manager.add(ticket5);
         int expected = -1;
-        int actual = ticketTimeComparator.compare(ticket1 , ticket5);
+        int actual = ticketTimeComparator.compare(ticket1, ticket5);
         Assertions.assertEquals(expected, actual);
 
 
     }
+
     @Test
-    public void TestIfTimeEquals(){
+    public void TestIfTimeEquals() {
         TicketTimeComparator ticketTimeComparator = new TicketTimeComparator();
         AviaSouls manager = new AviaSouls();
         manager.add(ticket6);
         manager.add(ticket3);
         int expected = 0;
-        int actual = ticketTimeComparator.compare(ticket6 , ticket3);
+        int actual = ticketTimeComparator.compare(ticket6, ticket3);
         Assertions.assertEquals(expected, actual);
 
 
@@ -114,6 +114,7 @@ public class AviaSoulsTest {
         Ticket[] actual = manager.searchAndSortBy("Казань", "Уфа", ticketTimeComparator);
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void TestForSearchAndSortByIfNoTickets() {
         TicketTimeComparator ticketTimeComparator = new TicketTimeComparator();
