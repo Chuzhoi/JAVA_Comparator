@@ -1,5 +1,10 @@
+package ru.netology.comparator.test;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import ru.netology.comparator.AviaSouls;
+import ru.netology.comparator.Ticket;
+import ru.netology.comparator.TicketTimeComparator;
 
 import java.util.Comparator;
 
